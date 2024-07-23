@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'lottie',
+    loadChildren: () => import('./lottie/lottie.module').then( m => m.LottiePageModule)
+  },
 ];
 
 @NgModule({
